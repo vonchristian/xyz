@@ -75,6 +75,9 @@ GEM
     date (3.3.3)
     debug (1.7.1)
     erubi (1.12.0)
+    ffi (1.15.5)
+    font-awesome-sass (6.3.0)
+      sassc (~> 2.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -145,6 +148,8 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     redis (4.8.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -153,6 +158,8 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.25-arm64-darwin)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.2)
@@ -178,6 +185,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  font-awesome-sass (~> 6.3.0)
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -186,6 +194,7 @@ DEPENDENCIES
   redis (~> 4.0)
   sprockets-rails
   stimulus-rails
+  tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
   web-console
