@@ -1,1 +1,29 @@
-<%= book.title %>
+
+<div class="mt-10 mx-auto  max-w-screen-xl md:mx-auto">
+  <div class="flex grid grid-cols-4">
+    <div class="col-start-1">
+      <%= image_tag 'doughnuts_book.png', style: "height:80%", class: 'h-auto max-w-xs xl:max-w-xs xl:h-auto rounded-lg' %>
+    </div>
+    <div class="md:col-start-2">
+      <h1 class="font-extrabold text-4xl"><%=book.title %></h1>
+      <p class="font-semibold mt-2">by: <%= book.authors_name %>
+      <ul class="text-gray-600 dark:text-gray-400">
+        <li class="mb-2 mt-5 font-semibold">
+            Edition: <span class="text-indigo-600"><%= book.edition %></span>
+        </li>
+        <li class="mb-2 font-semibold">
+            Price: <span class="text-indigo-600"><%= book.price.currency %> <%= book.price %></span>
+        </li>
+        <li class="mb-2 font-semibold">
+            ISBN: <span class="text-indigo-600"><%= book.isbn_13 %></span>
+        </li>
+        <li class="mb-2 font-semibold">
+            Publication Year: <span class="text-indigo-600"><%= book.publication_year %></span>
+        </li>
+        <li class="mb-2 font-semibold">
+            Publisher: <span class="text-indigo-600"><%= book.publisher_name %></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -67,3 +67,4 @@ end
 gem "tailwindcss-rails", "~> 2.0"
 gem "font-awesome-sass", "~> 6.3.0"
 gem 'pg_search'
+gem 'money-rails', '~>1.12'

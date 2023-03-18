@@ -28,3 +28,14 @@ elf.authorships.find_or_create_by(author: marguerite)
 cosmo = Book.find_or_create_by(title: "Cosmoknights", isbn_13: "978-1-60309-454-2", isbn_10: "1-603-09454-7", publication_year: 2019, publisher: publisher_weekly, edition: "Book 1", price_cents: 200000)
 cosmo.authorships.find_or_create_by(author: kingsley)
 
+essex = Book.find_or_create_by(title: "Essex County", isbn_13: "978-1-60309-038-4", isbn_10: "1-603-09038-X", publication_year: 1990, publisher: graywolf, price_cents: 50000)
+essex.authorships.find_or_create_by(author: kingsley)
+
+hey = Book.find_or_create_by(title: "Hey, Mister (Vol 1)",  isbn_13: "978-1-891830-02-0", isbn_10: "1-891-83002-3", publication_year: 2000, publisher: graywolf, edition: "After School Special", price_cents: 120000)
+hey.authorships.find_or_create_by(author: hannah)
+hey.authorships.find_or_create_by(author: fannie)
+hey.authorships.find_or_create_by(author: camille)
+
+welder = Book.find_or_create_by(title: "The Underwater Welder", isbn_13: "978-1-60309-398-9", isbn_10: "1-603-09398-2", publication_year: 2022, publisher: mcsweeney, price_cents: 300000)
+welder.authorships.find_or_create_by(author: rainer)
+
