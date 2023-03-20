@@ -46,6 +46,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_interaction (5.2.0)
+      activemodel (>= 5.2, < 8)
+      activesupport (>= 5.2, < 8)
     activejob (7.0.4.3)
       activesupport (= 7.0.4.3)
       globalid (>= 0.3.6)
@@ -70,6 +73,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
@@ -88,6 +92,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -128,6 +134,11 @@ GEM
     pg_search (2.3.6)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -200,14 +211,17 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_interaction (~> 5.2)
   bootsnap
   debug
   font-awesome-sass (~> 6.3.0)
   importmap-rails
   jbuilder
+  jsonapi-serializer
   money-rails (~> 1.12)
   pg (~> 1.1)
   pg_search
+  pry-rails
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   redis (~> 4.0)

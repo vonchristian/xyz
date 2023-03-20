@@ -68,3 +68,6 @@ gem "tailwindcss-rails", "~> 2.0"
 gem "font-awesome-sass", "~> 6.3.0"
 gem 'pg_search'
 gem 'money-rails', '~>1.12'
+gem 'active_interaction', '~> 5.2'
+gem 'pry-rails'
+gem 'jsonapi-serializer'
