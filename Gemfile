@@ -49,8 +49,11 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'pry-rails'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker'
 end
 
 group :development do
@@ -64,10 +67,14 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  gem 'database_cleaner-active_record', '~> 2.0', '>= 2.0.1'
+  gem 'simplecov', require: false
+end
+
 gem "tailwindcss-rails", "~> 2.0"
 gem "font-awesome-sass", "~> 6.3.0"
 gem 'pg_search'
 gem 'money-rails', '~>1.12'
 gem 'active_interaction', '~> 5.2'
-gem 'pry-rails'
 gem 'jsonapi-serializer'
