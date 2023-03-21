@@ -8,7 +8,7 @@ class Isbn::Conversions::VersionTen < ActiveInteraction::Base
 
     @isbn = isbn.delete("-")
 
-    return errors.add(:isbn, 'No 10 digit ISBN available') if @isbn =~ /^979/
+    return errors.add(:isbn, 'is invalid') if @isbn =~ /^979/
 
     validate_length
     validate_check_digit
@@ -21,7 +21,7 @@ class Isbn::Conversions::VersionTen < ActiveInteraction::Base
     when 10 then @isbn = @isbn[0..8]
     when 13 then @isbn = @isbn[/(?:^978|^290)*(.{9})\w/,1] #remove prefixed numbers and remove check digit
     else
-      return errors.add(:isbn, 'Invalid 10 digit ISBN')
+      return errors.add(:isbn, 'is invalid')
     end
   end
 
