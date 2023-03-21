@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :books, only: [:show]
+    resources :isbn_conversions, only: [:show]
   end
 
 end
